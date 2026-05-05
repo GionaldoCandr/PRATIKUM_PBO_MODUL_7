@@ -1,0 +1,29 @@
+kode tersebut tidak akan berjalan (compile-time error)
+Compiler Java akan menganggap pemanggilan example.test(10, 5) 
+sebagai ambiguous method call
+masalah nya pada
+
+1. Kandidat Method Overload
+punya dua method:
+test(int a, double b) → Fase A
+test(double a, int b) → Fase B
+
+2. Argumen yang Dikirim
+Pemanggilan:
+example.test(10, 5);
+Tipe literal:
+10 → int
+5 → int
+
+3. Proses Resolusi Overloading oleh Compiler
+Java mencoba mencari method yang paling cocok (most specific method).
+Cocok ke Fase A:
+test(int, double)
+10 → int  (exact match)
+5 → double  (butuh widening dari int → double)
+
+Kedua method:
+Sama-sama valid
+Sama-sama membutuhkan 1 kali widening conversion
+Tidak ada yang lebih spesifik secara dominan
+

@@ -1,0 +1,15 @@
+Kenapa drift() tidak bisa dipanggil?
+Baris ini kuncinya:
+Vehicle myVehicle = new Car(); // upcasting
+Di sini terjadi upcasting, artinya:
+Tipe referensi: Vehicle
+Objek aktual: Car
+
+Java menentukan method yang boleh dipanggil berdasarkan tipe referensi, bukan objek aktual.
+Jadi:
+myVehicle.speedUp() yang benar → karena ada di Vehicle
+myVehicle.drift() yang salah → karena tidak ada di class Vehicle
+Walaupun objeknya Car, compiler tidak tahu itu secara eksplisit tanpa casting
+
+
+
