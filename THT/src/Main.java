@@ -40,7 +40,7 @@ public class Main {
             
             System.out.println("-------------------------------------------------");
         }
-        // Cetak total pendapatan akhir keseluruhan dari ongkir dasar [6]
+        // Cetak total pendapatan akhir keseluruhan dari ongkir dasar 
         System.out.println("TOTAL PENDAPATAN PERUSAHAAN (Ongkir Dasar) : Rp " + totalPendapatanPerusahaan);
     }
 }
